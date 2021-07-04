@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title></title>
+    <style type="text/css">
+        html,
+        body,
+        form {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- 検索フォーム（PC/iframe内用（floating）） -->
+    <!-- ★印部分のパス設定必須 -->
+    <script>
+        var flagFramePage = 1;
+        var readed = 0;
+
+        function setSearchForm1() {
+            if (!readed) {
+                readed = 1;
+                var script = document.createElement('script');
+                script.src = "https://www.emotions.co.jp/tvsearch_test/data_tv.js"; // ★1
+                script.type = "text/javascript";
+                script.charset = "UTF-8";
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
+        }
+
+        function setSearchForm2() {
+            var script = document.createElement('script');
+            script.src = "https://www.emotions.co.jp/tvsearch_test/search.js"; // ★1
+            script.type = "text/javascript";
+            script.charset = "UTF-8";
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://www.emotions.co.jp/tvsearch_test/search_pc.css" />
+    <!-- ★1 -->
+    <form action="http://www.ace-of-parts.com/page/153#searchform" method="get" id="tvk_form" target="_top">
+        <!-- ★2 -->
+        <div id="searchform_float" onmouseover="setSearchForm1()">
+            <div>
+                <div id="search_title"><span>金具の簡単検索</span></div>
+            </div>
+            <div class="contents">
+                <div>取り付けたいテレビを入力すれば対応可能な金具がすぐにわかります。</div>
+                <div>
+                    <dl>
+                        <dt>1. テレビのメーカーを選ぶ</dt>
+                        <dd>
+                            <select name="m" id="tv_maker" onchange="setSelect2();">
+              <option selected="selected">TVメーカー</option>
+            </select>
+                        </dd>
+                        <dt>2. テレビのインチ数を選ぶ</dt>
+                        <dd>
+                            <select name="s" id="tv_size" onchange="setSelect3();">
+              <option selected="selected">TVサイズ</option>
+            </select>
+                        </dd>
+                        <dt>3. テレビの型番を選ぶ</dt>
+                        <dd>
+                            <select name="p" id="tv_productid" onchange="setSelect4();">
+              <option selected="selected">TV型番</option>
+            </select>
+                        </dd>
+                        <dt>4. テレビの取付け方法を選ぶ</dt>
+                        <dd>
+                            <select name="u" id="tv_setuptype" onchange="setSelect5();">
+              <option selected="selected">TV設置方法</option>
+            </select>
+                        </dd>
+                        <dt>5. 機能を選ぶ</dt>
+                        <dd>
+                            <select name="r" id="tv_seriestype" onchange="setButton();">
+              <option selected="selected">機能選択</option>
+            </select>
+                            <select name="r2" id="tv_seriestype2" style="display:none;">
+              <option selected="selected">機能選択</option>
+            </select>
+                        </dd>
+                    </dl>
+                    <div id="search_bt">
+                        <div><span>検索</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- /検索フォーム -->
+
+
+</html>

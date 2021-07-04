@@ -1,0 +1,104 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <title></title>
+    <!-- 2021.5.25 jqueryをロード -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body style="margin:0;">
+
+
+    <!-- 検索フォーム（PC/iframe内用） -->
+    <!-- ★印行のパス設定必須 -->
+    <script>
+        var flagFramePage = 1;
+        var readed = 0;
+
+        function setSearchForm1() {
+            if (!readed) {
+                readed = 1;
+                var script = document.createElement('script');
+                script.src = "https://www.emotions.co.jp/tvsearch_test2/data_tv.js"; // ★1
+                script.type = "text/javascript";
+                script.charset = "UTF-8";
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
+        }
+
+        function setSearchForm2() {
+            var script = document.createElement('script');
+            script.src = "https://www.emotions.co.jp/tvsearch_test2/search.js"; // ★1
+            script.type = "text/javascript";
+            script.charset = "UTF-8";
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+        setSearchForm1();
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://www.emotions.co.jp/tvsearch_test2/search_pc.css" />
+    <!-- ★1 -->
+
+    <div id="searchform" class="w700" style="width: 750px;">
+        <form method="get" id="tvk_form" target="_top">
+            <!-- ★2 -->
+            <div>
+                <div id="search_pc_1"><span>TVメーカー</span></div>
+                <select name="m" id="tv_maker" onchange="setSelect2();">
+                    <option value="" selected="selected">TVメーカー</option>
+                </select>
+            </div>
+            <div class="arrow"><span>→</span></div>
+            <div>
+                <div id="search_pc_2"><span>TVサイズ</span></div>
+                <select name="s" id="tv_size" onchange="setSelect3();">
+                    <option value="" selected="selected">TVサイズ</option>
+                </select>
+            </div>
+            <div class="arrow"><span>→</span></div>
+            <div>
+                <div id="search_pc_3"><span>TV型番</span></div>
+                <select name="p" id="tv_productid" onchange="setSelect4();">
+                    <option value="" selected="selected">TV型番</option>
+                </select>
+            </div>
+            <div class="arrow"><span>→</span></div>
+
+            <div>
+                <div id="search_pc_4"><span>TV設置方法</span></div>
+                <select name="u" id="tv_setuptype" onchange="setSelect5();">
+                    <option value="" selected="selected">TV設置方法</option>
+                </select>
+            </div>
+            <div class="arrow"><span>→</span></div>
+
+            <div>
+                <div id="search_pc_5"><span>TV設置方法</span></div>
+
+                <select name="r" id="tv_seriestype" onchange="setButton();">
+                    <option value="" selected="selected">機能選択</option>
+                </select>
+
+                <select name="r2" id="tv_seriestype2" style="display:none">
+                    <option value="" selected="selected">機能選択</option>
+                </select>
+            </div>
+
+
+            <div class="arrow"><span>→</span></div>
+            <div id="search_bt">
+                <div><span>検索</span></div>
+            </div>
+        </form>
+    </div>
+    <!-- /検索フォーム -->
+
+    <script type="text/javascript" src="./search_model.js"></script>
+
+</body>
+
+</html>

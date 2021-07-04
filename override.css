@@ -1,0 +1,544 @@
+@charset "euc-jp";
+
+/*====================
+custom_common
+===================*/
+#main {
+	width: 700px;
+}
+
+.redmark{
+	color:#FF0000;
+}
+
+.left{
+	clear: left;
+	float: left;
+}
+.left-tekigo{
+	clear: left;
+	float: left;
+	margin:0 0 0 300px;
+}
+.right{
+	clear: right;
+	float: right;
+}
+.floatL {
+	float: left!important
+}
+.floatR {
+	float: right!important
+}
+a img:hover{
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+body {
+	width: 900px;
+	margin:0 auto;
+}
+#main{
+	background-color: #ffffff;
+}
+#main.tips,#main.w_guide,#main.m_guide{
+	-webkit-text-size-adjust: 100%;
+
+}
+.con{
+	margin-top: 0px;
+}
+.con p{
+	line-height: 1.6;
+}
+
+/*====================
+tips
+===================*/
+.tips .topimg{
+	margin: 0 0 10px 0;
+	padding: 0px;
+}
+.tips .con1_box_container{
+	margin: 0;
+	padding: 0px;
+}
+.tips .con1 h2{
+	margin-bottom: 5px;
+}
+.tips .con1_box{
+	border:1px #CCCCCC solid;
+	background-color: #eef7e4;
+	margin:10px 0;
+	padding: 0px 0;
+
+}
+.tips .con1_box img{
+	margin: 10px 10px;
+	padding: 35px 0;
+
+}
+.tips .con h3{
+	color: #532f0b;
+	font-size: 22px;
+	margin-bottom: 0.8em;
+	line-height: 1.3;
+}
+.tips .con1_box_inner{
+	margin:0 10px;
+	width: 450px;
+}
+.tips .con2 h2{
+	margin-bottom: 10px;
+}
+.tips .con2_box{
+	width: 310px;
+	height: 475px;
+	border:1px #CCCCCC solid;
+	padding: 0px 18px 18px 18px;
+	margin-bottom: 10px;
+}
+.tips .con2_box_last{
+	clear: both;
+	width: 662px;
+	height: 460px;
+}
+.tips .con2_box img{
+	display: block;
+	margin: 0 auto 20px;
+}
+.tips .con2_box h3{
+	padding-left: 48px;
+	margin-left: -3px;
+	padding-top: 0px;
+}
+.tips .con2_box p{
+	width: 300px;
+	margin: 0 auto;
+}
+.tips .con2_box_last p{
+	width: 645px;
+}
+.tips .con2_box p .ex{
+	font-size: 11px;
+	line-height: 1.4;
+	display: block;
+	margin-top: 5px;
+}
+.tips .con2_box h3.con2_crown1{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con2_crown1.jpg') left top no-repeat;
+	height: 85px;
+	margin-top: 15px;
+}
+.tips .con2_box h3.con2_crown2{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con2_crown2.jpg') left top no-repeat;
+	height: 85px;
+	margin-top: 15px;
+}
+.tips .con2_box h3.con2_crown3{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con2_crown3.jpg') left top no-repeat;
+	height: 57px;
+	margin-top: 15px;
+}
+.tips .con2_box h3.con2_crown4{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con2_crown4.jpg') left top no-repeat;
+	height: 57px;
+	margin-top: 15px;
+}
+.tips .con2_box h3.con2_crown5{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con2_crown5.jpg') left top no-repeat;
+	height: 40px;
+	margin-top: 15px;
+}
+.tips .con3 h2{
+	margin-bottom: 10px;
+}
+.tips .con3_box{
+	border:1px #CCCCCC solid;
+	background-color: #eff7e8;
+	padding: 0px 20px 20px 20px;
+	margin: 0 0 5px 0;
+}
+.tips .con3_box h4{
+	padding-left: 39px;
+	color: #532f0b;
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #888;
+	font-size: 22px;
+	line-height: 1.3;
+}
+.tips .con3_box p{
+	padding-left: 39px;
+	color: #532f0b;
+	margin-top: 10px;
+}
+.tips .con3_box1 h4{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q1.jpg') left 3px no-repeat;
+}
+.tips .con3_box1 p{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q1.jpg') left top no-repeat;
+}
+.tips .con3_box2 h4{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q2.jpg') left 3px no-repeat;
+}
+.tips .con3_box2 p{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q2.jpg') left top no-repeat;
+}
+.tips .con3_box3 h4{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q3.jpg') left 3px no-repeat;
+}
+.tips .con3_box3 p{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q3.jpg') left top no-repeat;
+}
+.tips .con3_box4 h4{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q4.jpg') left 3px no-repeat;
+}
+.tips .con3_box4 p{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q4.jpg') left top no-repeat;
+}
+.tips .con3_box5 h4{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q5.jpg') left 3px no-repeat;
+}
+.tips .con3_box5 p{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q5.jpg') left top no-repeat;
+}
+.tips .con3_box6 h4{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q6.jpg') left 3px no-repeat;
+}
+.tips .con3_box6 p{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q6.jpg') left top no-repeat;
+}
+.tips .con3_box7 h4{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q7.jpg') left 3px no-repeat;
+}
+.tips .con3_box7 p{
+	background: url('https://www.ace-of-parts.com/data/ace-of-parts/image/f-qa/tips_con3_q7.jpg') left top no-repeat;
+}
+.tips .con3_box8 {
+	text-align:right;
+}
+.tips .con3_box8 a img{
+	margin: 20px 0px 0px 0px;
+}
+.tips .con3_box1 a{
+	margin: 10px 0 0 490px;
+}
+.tips .con3_box3 p{
+	width: 450px;
+}
+.tips .con3_box3 img{
+	margin-top: 0px;
+	margin-left: 15px;
+}
+.tips .con3_box3 a img{
+	margin-top: -20px;
+	margin-left: 300px;
+}
+.tips_bottom{
+	padding: 10px 0;
+}
+.tips_bottom img{
+	display: block;
+	margin: 0px auto;
+}
+
+/*====================
+wall_guide
+===================*/
+.topimg{
+	margin-bottom:-30px;
+}
+.w_guide .con1 h2{
+	margin-bottom: 3px;
+	margin-top:35px;
+}
+.w_guide .intro{
+	width: 700px;
+	height: 268px;
+	position: relative;
+	margin-top: 5px;
+}
+.w_guide .btn_a1{
+	position: absolute;
+	left: 177px;
+	top: 75px;
+}
+.w_guide .btn_b1{
+	position: absolute;
+	left: 352px;
+	top: 75px;
+}
+.w_guide .btn_c1{
+	position: absolute;
+	left: 526px;
+	top: 75px;
+}
+.w_guide .btn_a2{
+	position: absolute;
+	left: 177px;
+	top: 146px;
+}
+.w_guide .btn_b2{
+	position: absolute;
+	left: 352px;
+	top: 146px;
+}
+.w_guide .btn_c2{
+	position: absolute;
+	left: 526px;
+	top: 146px;
+}
+.w_guide .btn_a3{
+	position: absolute;
+	left: 177px;
+	top: 217px;
+}
+.w_guide .btn_b3{
+	position: absolute;
+	left: 352px;
+	top: 217px;
+}
+.w_guide .btn_c3{
+	position: absolute;
+	left: 526px;
+	top: 217px;
+}
+.w_guide .con1_box{
+	padding: 5px 0px;
+	margin: 0 ;
+}
+.w_guide .con1_box + .con1_box{
+}
+.w_guide .con1_box_container{
+	padding-bottom: 20px;
+}
+.w_guide .con1_box_inner{
+	width: 698px;
+	border: 1px solid #888;
+}
+.w_guide .con1_box h3{
+	background-color: #cedec1;
+	text-align: center;
+	padding: 3px;
+	color: #532f0b;
+	font-size: 17px;
+	margin-bottom: 15px;
+}
+.w_guide .con1_box_inner .imgs{
+	padding-top: 0px;
+	margin: -15px 0px 5px 315px;
+}
+.w_guide .con1_box p{
+	padding: 10px;
+}
+/*====================
+metal_guide
+===================*/
+.m_guide .con1 h2{
+	margin-bottom: 5px;
+}
+
+.m_guide .con1_box_container{
+	background-color: #eef7e4;
+	border:1px #CCCCCC solid;
+	margin-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 10px;
+	padding-bottom:5px;
+}
+.m_guide .con1_box img{
+	padding: 30px 0;
+}
+
+.m_guide .con1_box + .con1_box{
+	border-top: 1px dashed #888;
+}
+.m_guide .con h3{
+	color: #532f0b;
+	font-size: 22px;
+	margin-bottom: 0.8em;
+	line-height: 1.3;
+}
+.m_guide .con1_box_inner{
+	width: 510px;
+	position: relative;
+}
+.m_guide .con1_box a{
+	position: absolute;
+	left: 330px;
+	bottom: -30px;
+	margin: 0;
+	padding: 0;
+}
+.m_guide .con1_box a img{
+	margin: 0;
+	padding: 0;
+}
+.m_guide .con2 h2{
+	margin-bottom: 10px;
+}
+.m_guide .con2_box{
+	width: 297px;
+	height: 450px;
+	background-color: #ffffff;
+	border:1px #CCCCCC solid;
+	padding: 0 24px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.m_guide .con2_box a{
+	position: absolute;
+	left: 150px;
+	bottom: 10px;
+}
+.m_guide .con2_box > img{
+	display: block;
+	margin: 0 auto 20px;
+}
+.m_guide .con2_box h3{
+	padding-top: 0;
+	margin-bottom: 0.5em;
+}
+.m_guide .con2_box p{
+	margin: 0 auto;
+}
+.m_guide .con2_box3 h3{
+	letter-spacing: -0.1em;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { .m_guide .con2_box3 h3 { letter-spacing: -0.15em; }}
+
+.m_guide .con3 h2{
+	margin-bottom: 10px;
+}
+.m_guide .con3_box{
+	position: relative;
+	width: 678px;
+	padding: 0px 10px;
+	border:1px #CCCCCC solid;
+	margin-bottom:5px;
+}
+.m_guide .con3_box_inner{
+	width: 408px;
+	padding:0 0 5px 0;
+}
+.m_guide .con3_box1 .con3_box_inner{
+	width: 335px;
+	padding:0 0 5px 0;
+}
+.m_guide .con3_box1_img1{
+	position: absolute;
+	left: 360px;
+	top: 29px;
+}
+.m_guide .con3_box1_img2{
+	position: absolute;
+	left: 157px;
+	top: 170px;
+}
+.m_guide .con3_box h3{
+	background-color: #cedec1;
+	text-align: center;
+	padding: 3px;
+	color: #532f0b;
+	font-size: 17px;
+	margin-bottom: 15px;
+}
+.m_guide .con3_box2 img,
+.m_guide .con3_box3 img{
+	padding: 30px 0;
+	margin-left: 55px;
+}
+.m_guide .con3_box1_desc2{
+	width: 113px;
+	margin-top: 1em;
+}
+
+
+.m_guide .con4 h2{
+	margin-bottom: 10px;
+}
+.m_guide .con4_box{
+	padding: 0 ;
+	background-color: #eff7e8;
+	border:1px #CCCCCC solid;
+	margin-bottom:5px;
+}
+.m_guide .con4_box h4{
+	padding-left: 0px;
+	color: #532f0b;
+	padding: 10px 0 0 10px;
+	margin:0;
+	font-size: 25px;
+	line-height: 1.0;
+}
+.m_guide .con4_box p{
+	padding: 0 20px 10px 30px;
+	color: #532f0b;
+}
+.m_guide .con4_box p.con4_box3_desc1{
+	border-bottom:0px;
+	padding-bottom: 0;
+}
+.m_guide .con4_box p.con4_box3_desc2{
+	border-bottom:0px;
+	padding-bottom: 0px;
+	text-align: right;
+}
+/*====================
+safetest
+===================*/
+#safetest {
+ width: 700px;
+ padding: 0px 10px 0px 10px;
+ font-family:'Lucida Grande',
+ 'Hiragino Kaku Gothic ProN', '?q???M?m?p?S ProN W3',
+ Meiryo, ???C???I, sans-serif;
+ font-size: 13px;
+ font-style: normal; 
+ line-height: 1.4em;
+ }
+#safetest .imgbox {
+ width: 325px;
+ float: left;
+ margin: 0px 10px 20px 0px;
+ }
+#safetest .textbox {
+ padding: 30px 5px 0px 5px;
+ }
+#safetest ul {
+ float: left;
+ padding: 10px 5px 0px 5px;
+ list-style-type: none;
+ }
+#safetest li {
+ padding: 0px 0px 10px 0px;
+ }
+#safetest .youtubebox {
+ margin: 50px 0px 50px 0px;
+ text-align: center;
+ }
+#safetest h1{
+ border-bottom: 1px solid red;
+ font-size: 15px; 
+ }
+#safetest h2{
+ text-align: center;
+ color: white;
+ background-color: #ff4500;
+ padding: 5px 0px 5px 0px;
+ margin: 10px 0px 20px 0px;
+ }
+#safetest .title{
+ background-color: #2f4f4f;
+ color: white;
+ text-align: center;
+ padding: 5px 0px 5px 0px;
+ margin: 0px 50px 0px 50px;
+ width: 600px;
+ }
+#safetest .bold {
+ font-weight: bold; 
+ }
+#safetest .clear {
+ clear: both;
+ }

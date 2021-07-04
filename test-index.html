@@ -1,0 +1,343 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>無題ドキュメント</title>
+</head>
+
+<body>
+
+    <div class="guide-newstyle">
+        <div id="guide-new">
+           
+            <link href="new-kabekake.css" rel="stylesheet" />
+
+
+            <link rel="stylesheet" type="text/css" href="https://www.emotions.co.jp/tvsearch_test2/search_pc.css" />
+            <!-- ★1 -->
+            <script type="text/javascript">
+                var flagFramePage;
+            </script>
+
+
+            <script type="text/javascript" src="https://www.emotions.co.jp/tvsearch_test2/data_tv.js"></script>
+            <!-- ★1 -->
+            <script type="text/javascript" src="https://www.emotions.co.jp/tvsearch_test2/data_price_ace.js"></script>
+            <!-- ★1 -->
+            <script type="text/javascript" src="https://www.emotions.co.jp/tvsearch_test2/search.js"></script>
+            <!-- ★1 -->
+            <script type="text/javascript" src="https://www.emotions.co.jp/tvsearch_test2/search_page.js"></script>
+            <!-- ★1 -->
+            <script type="text/javascript" src="https://www.emotions.co.jp/tvsearch_test2/TV_model/TV_HTML.js"></script>
+
+            <iframe src="https://www.emotions.co.jp/tvsearch_test2/TV_model/default.html" id="tvFrame"
+                style="width:760px; height:200px"></iframe>
+            <center>
+                <div id="searchform" class="w700" style=" width:750px; display:none;">
+                    <form action="https://www.ace-of-parts.com/page/153" method="get" id="tvk_form">
+                        <!-- ★2 -->
+                        <div>
+                            <div id="search_pc_1"><span>TVメーカー</span></div>
+                            <select name="tv_maker" id="tv_maker" onChange="setSelect2();">
+                                <option value="" selected="selected">TVメーカー</option>
+                            </select>
+                        </div>
+                        <div class="arrow"><span>→</span></div>
+                        <div>
+                            <div id="search_pc_2"><span>TVサイズ</span></div>
+                            <select name="tv_size" id="tv_size" onChange="setSelect3();">
+                                <option value="" selected="selected">TVサイズ</option>
+                            </select>
+                        </div>
+                        <div class="arrow"><span>→</span></div>
+                        <div>
+                            <div id="search_pc_3"><span>TV型番</span></div>
+                            <select name="tv_productid" id="tv_productid" onChange="setSelect4();">
+                                <option value="" selected="selected">TV型番</option>
+                            </select>
+                        </div>
+                        <div class="arrow"><span>→</span></div>
+                        <div>
+                            <div id="search_pc_4"><span>TV設置方法</span></div>
+                            <select name="tv_setuptype" id="tv_setuptype" style="width:150px" onChange="setSelect5();">
+                                <option value="" selected="selected">TV設置方法</option>
+                            </select>
+                        </div>
+                        <div class="arrow"><span>→</span></div>
+                        <div>
+                            <div id="search_pc_5"><span>TV設置方法</span></div>
+                            <select name="tv_seriestype" id="tv_seriestype" style="width:150px" onChange="setButton();">
+                                <option value="" selected="selected">機能選択</option>
+                            </select>
+                            <select name="" id="tv_seriestype2" style="display:none">
+                                <option value="" selected="selected">機能選択</option>
+                            </select>
+                        </div>
+                        <div class="arrow"><span>→</span></div>
+                        <div id="search_bt">
+                            <div><span>検索</span></div>
+                        </div>
+                    </form>
+                </div>
+            </center>
+
+            <link href="https://www.emotions.co.jp/tvsearch_test2/tv_model.css" type="text/css" rel="stylesheet" />
+            <script src="https://www.emotions.co.jp/tvsearch_test2/tv_model.js"></script>
+            <div class="subsearch">
+                <div class="subsearch-header">さらに絞り込む</div>
+                <div class="subsearch-body">
+                    <div class="subsearch-content">
+                        <div class="subsearch-content-title" onclick="radioA()">金具タイプで絞り込み</div>
+                        <div class="subsearch-content-main">
+                            <dl>
+                                <dt><input type="checkbox" id="hang" onchange="ena()"><label for="hang">壁掛け</label></dt>
+                                <dd><input type="radio" name="hang" id="hang1" disabled><label for="hang1">角度固定</label>
+                                </dd>
+                                <dd><input type="radio" name="hang" id="hang2" disabled><label for="hang2">上下調節型</label>
+                                </dd>
+                                <dd><input type="radio" name="hang" id="hang3" disabled><label
+                                        for="hang3">上下・左右調節（フルモーション）</label></dd>
+                                <dt><input type="checkbox" id="woody"><label for="woody">ツーバイフォー（ウッディ）</label></dt>
+                                <dt><input type="checkbox" id="rental"><label for="rental">賃貸住宅向け</label></dt>
+                                <dt><input type="checkbox" id="stand"><label for="stand">テレビスタンド</label></dt>
+                                <dt><input type="checkbox" id="bar"><label for="bar">突っ張り棒（エアポール）</label></dt>
+                                <dt><input type="checkbox" id="ceil"><label for="ceil">天吊り</label></dt>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="subsearch-content">
+                        <div class="subsearch-content-title" onclick="radioB()">金具クラスで絞り込み</div>
+                        <div class="subsearch-content-main">
+                            <dl>
+                                <dt><input type="radio" name="radiob" id="basic" disabled><label
+                                        for="basic">ベーシック</label></dt>
+                                <dt><input type="radio" name="radiob" id="stylish" disabled><label
+                                        for="stylish">スタイリッシュ</label></dt>
+                                <dt><input type="radio" name="radiob" id="quality" disabled><label
+                                        for="quality">超高品質</label></dt>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="subsearch-content">
+                        <div class="subsearch-content-title" onclick="radioC()">金額で絞り込み </div>
+                        <div class="subsearch-content-main">
+                            <dl>
+                                <dt><input type="radio" name="radioc" id="lowprice" onchange="price(1)" disabled><label
+                                        for="lowprice">５０００円以下</label></dt>
+                                <dt><input type="radio" name="radioc" id="midprice" onchange="price(2)" disabled><label
+                                        for="midprice">５０００円超ー１００００円</label></dt>
+                                <dt><input type="radio" name="radioc" id="highprice" onchange="price(3)" disabled><label
+                                        for="highprice">１００００円超</label></dt>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="subsearch-footer">
+                    <button type="button" class="subsearch-button" onclick="subsearch()">結果を表示</button>
+                </div>
+            </div>
+            <div class="paginate-bar">
+                <div class="paginate-header" id="paginate_header">1 ~ 10件 （全53件）</div>
+                <div class="paginate-main">
+                    <div class="paginate-col">
+                        <input type="button" id="previous" onclick="previousPage()" disabled value="<< 前へ">
+                    </div>
+                    <div id="number_bar">
+
+                    </div>
+                    <div class="paginate-col">
+                        <input type="button" id="next" onclick="nextPage()" disabled value="次へ >>">
+                    </div>
+                </div>
+                <div class="paginate-sort">
+                    表示順 : <span onclick="sortOrder()" style="cursor: pointer;">価格 <img id="number_order"
+                            src="https://www.emotions.co.jp/tvsearch_test2/1.svg"
+                            style="margin: 0; display: -webkit-inline-box;"></span> &nbsp;|&nbsp; 才ススメ順
+                </div>
+                <div class="paginate-number">
+                    件数 : <span onclick="number_ten()" style="cursor: pointer;">10件</span> | <span
+                        onclick="number_fifty()" style="cursor: pointer;">50件</span>
+                </div>
+            </div>
+
+            <div id="itemlist" class="w700"></div>
+            <!-- /検索フォーム -->
+
+            <!--search_explain-->
+
+            <div>
+                <h2>テレビ適合一覧表を、Excelでもご確認いただけます</h2>
+                <p>※複数台のテレビをお持ちの方で、適合確認を何度も行う場合は一覧表での確認が簡単です。</p>
+                <p style="border:1px dotted #000000; padding:20px; margin:20px;"><b><a
+                            href="https://www.rakuten.ne.jp/gold/ace-of-parts/tv-kanagu-list/tekigo.xlsx">※　東芝・SHARP・Panasonic・SONY・三菱・日立・Orion・LG各適合一覧表　※</a></b><br /><br />
+                    ■上記メーカーに関しては、エクセルファイルにてシートごとに一覧表を記載しています。
+                    <br> ■上記一覧表に記載のない型番に関しては弊社で情報を持っていない場合が多い為、別途お問い合わせください。
+
+                <h2>必ず下記をご確認ください</h2>
+                <p>当店の適合確認検索で確認出来るテレビに関して、
+                    <font color="#FF0000"><b>事前確認無しで取付けの出来ない金具をご購入している場合は返品対象外となり一切の返品をお受けできません</b></font>ので、必ずご確認下さい。
+                    検索結果で表示されている金具は対応インチ目安内の金具のみ表示されております。
+                    対応インチ外の金具も取り付けが可能な場合がございますので、表示されない金具につきましてはメールまたはお電話にてお問い合わせください。
+                    <br />
+                    <br />
+                    選択肢にお手持ちのテレビメーカー・型番が無い場合はお手数ですが事前にメール、電話にてお問い合わせ下さい。問い合わせが必須の機種やメーカーが倒産してしまっている場合等確認にお時間がかかる場合があります。
+                    <br /><br />
+
+                    <font color="#FF0000">
+                        <b>商品に付属している各種ネジは基本的な種類のネジとなっております。テレビによってはネジの径や長さが合わない場合がありますので、その場合は別途テレビに合うネジをご用意ください。</b>
+                    </font>
+
+
+
+                <h2>当店の適合確認方法</h2>
+                <p style=" margin: 20px 75px 10px 75px;"><img
+                        src="https://www.ace-of-parts.com/data/ace-of-parts/image/contents/common/tekigo-0002.gif"></p>
+                <p style=" margin: 20px 75px 10px 75px;"><img
+                        src="https://www.ace-of-parts.com/data/ace-of-parts/image/contents/common/tekigo-0001.gif"></p>
+
+                <p>当店では、各メーカーのテレビ背面図、マニュアルを確認して画像のような箇所を確認しながら設置の可否を判断しております。公開している適合確認表に記載している内容・対処法を解説いたします。</p>
+
+                <h3>適合確認表示文章と、対処方法</h3>
+
+                <p>当店ではテレビの寸法図を確認し、金具との適合確認を行っておりますが、特に気にせず設置できる金具とテレビの背面によって設置に工夫が必要な金具がございます。その際に適合確認システムに文書を表示させていただいております。
+                    文章が表示されても大丈夫！ホームセンター等で部品を用意していただくと設置できるものばかりです。 </p>
+
+                <h4>表示1、問題なく取付け可能な場合</h4>
+                <ul style="color: #F60; font-weight:600; line-height:150%;">
+                    <li>この商品で取付け可能です</li>
+                </ul>
+                <p style="margin-top:20px;">特に問題なくお取付可能ですが、付属のねじ類の長さは基本的なサイズとなるため、ねじ類がテレビに合わない場合はホームセンター等でご用意ください。</p>
+
+                <h4>表示2、テレビやに付属しているスペーサーを用意する場合</h4>
+                <ul style="color: #F60; font-weight:600; line-height:150%;">
+                    <li>TVに付属しているスペーサー（アタッチメント）が必要です。スペーサーが無い場合はお取り付けできません。</li>
+                    <li>取付け時にTVメーカーオプションの部品が必要です。別途ご用意ください。</li>
+                </ul>
+                <p style="margin-top:20px;">
+                    テレビに特殊な段差がある場合、壁掛けをするためにテレビに付属でスペーサーやアタッチメントを同梱している場合があります。もし紛失してしまった場合などは、TVメーカーにお問い合わせください。また、別途メーカーのアタッチメントを購入することで壁掛けできないTVでも壁掛けできる場合もございます。
+                </p>
+
+                <h4>表示3、当店金具に付属しているスペーサーを使用する場合</h4>
+                <ul style="color: #F60; font-weight:600; line-height:150%;">
+                    <li>背面に段差があるので金具に付属しているスペーサーを使用するか段差を避けてお取り付けください。</li>
+                    <li>背面に段差がある為金具に付属しているスペーサーの使用が必須です。</li>
+                    <li>背面端子を使用する場合は金具に付属しているスペーサーを使用するか別途L型端子の配線をご用意ください。</li>
+                    <li>背面段差が干渉するため金具に付属しているスペーサーの使用が必須です。下向き調節に制限があります。</li>
+                    <li>背面段差が干渉するため金具に付属しているスペーサーの使用が必須です。左右首振りに制限があります。</li>
+                    <li>背面段差により下向き調節に制限があります。更に角度が必要な場合は金具に付属しているスペーサーをご使用ください。</li>
+                    <li>背面段差により左右首振りに制限があります。更に首振りが必要な場合は金具に付属しているスペーサーをご使用ください。</li>
+                </ul>
+                <p style="margin-top:20px;">
+                    当店では、テレビの背面図を見て、以上のようにテレビの段差が金具に干渉しないかをチェックしています。商品に付属のスペーサーは1.2cmの厚み、もしくは2cmの厚みを同梱しているため、段差が付属のスペーサーより小さい場合は、スペーサーの設置をお願いしています。<br /><br />配線類も金具と壁の距離が近いと配線がうまく出来ない可能性もあります。そのときもスペーサーを使っていただくなり、
+                    <font color="#FF0000"><b>端子を薄く設置するためにL型端子を購入したり、コンセントは下から刺すようにスイングタップをご用意ください。</b></font>
+                </p>
+
+                <p style=" margin: 20px 75px 10px 75px;"><img
+                        src="https://www.ace-of-parts.com/data/ace-of-parts/image/information/dansa-kai.jpg"></p>
+                <h4>表示4、テレビ背面のネジ穴が特殊な場合</h4>
+                <ul style="color: #F60; font-weight:600; line-height:150%;">
+                    <li>背面の取り付け穴が中央ではない為金具の回転機能に制限があります。</li>
+                    <li>背面の取り付け穴が下方にある為TV側金具の下穴のみを使用して取り付ける可能性があります。</li>
+                    <li>背面の取り付け穴が上方にある為TV側金具の上穴のみを使用して取り付ける可能性があります。</li>
+                    <li>取り付け穴が下方の為TV側金具の下穴のみを使用の上、背面端子を使用する場合は金具に付属しているスペーサーを使用するか別途L型端子の配線をご用意ください。</li>
+                </ul>
+
+                <p style="margin-top:20px;">
+                    当店金具の汎用金具（どのサイズにも適合している金具）を使用する際は、下の画像のように、ブラケットは上下サイズ違いの穴をテレビ側４点の穴に設置していただきますが、壁掛け用の穴が極端に下寄りか上寄りになっている場合は、サイズが同じ場所に設置しないと取り付けができません。イレギュラーな設置方法でも、金具がはみ出なければ設置可能としております。他にブルーレイ内蔵テレビなどの場合、テレビ背面の左右どちらからに大きな膨らみがある場合がございます。この膨らみのせいで回転機能つきの金具にぶつかってしまい回転できない場合もございます。
+                </p>
+                <p style=" margin: 20px 75px 10px 75px;"><img
+                        src="https://www.ace-of-parts.com/data/ace-of-parts/image/information/bura-tekigo.jpg"></p>
+
+
+
+                <h4>表示5、テレビ背面に極端に大きな段差がある場合</h4>
+
+                <ul style="color: #F60; font-weight:600; line-height:150%;">
+                    <li>背面段差の干渉の為アームを最後まで折りたためない可能性があり、更に下向き調節に制限があります。</li>
+                    <li>背面段差が干渉するため金具に付属しているスペーサーの使用が必須です。下向き調節に制限があります。</li>
+                </ul>
+
+
+                <p style="margin-top:20px;">
+                    近年スピーカーを重視したテレビが増えたせいか、テレビ下部がふっくらしたテレビが増えてきています。他に古い機種になるとブルーレイ内蔵のものがありますが、そのブルーレイが下方にあると段差が大きくなります。
+                    段差が大きくてもアーム型の金具の設置が可能な場合がありますが、アーム型金具の多くは綺麗に折りたため、折りたたむと薄くなるタイプがありますので、段差のせいで最後まで折りたためない可能性があります。
+                    <br /><br />また下向きにした場合、段差のほうが早く壁にぶつかりますので、ぶつかりを減らしたい場合スペーサーを使用するなど工夫が必要となります。
+                </p>
+                <p style=" margin: 20px 75px 10px 75px;"><img
+                        src="https://www.ace-of-parts.com/data/ace-of-parts/image/information/bulue-r-dan.jpg"></p>
+
+
+                <h4>表示6、当店にお電話やメールをいただきたい場合</h4>
+
+                <ul style="color: #F60; font-weight:600; line-height:150%;">
+                    <li>こちらの機種はテレビ情報が不足している為未確認となっております。詳しくはお問い合わせ下さい。</li>
+                    <li>こちらの機種は目安インチ範囲外の為未確認となっております。詳しく知りたい場合はお問い合わせ下さい。</li>
+                    <li>こちらの機種は別途お調べしますので、メール・お電話にてお問い合わせください。</li>
+                </ul>
+
+
+                <p style="margin-top:20px;">
+                    こちらの表示がある場合は、テレビ背面の情報が不足している場合、もしくは対応インチ外だけど設置出来る金具がある場合に表示されます。その場合は当店にお電話またはメールでお問い合わせください。</p>
+
+                <h4>表示7、当店金具の設置が不可になる場合</h4>
+                <ul style="color: #F60; font-weight:600; line-height:150%;">
+
+                    <li>据え置き専用のテレビです。　ネジ穴がある場合は製造過程で使用するネジ穴の為壁掛け用ではありません。</li>
+                    <li>スタンド一体型の為、取り付け非対応です。</li>
+                    <li>壁掛け用のネジ穴が特殊な為、メーカー純正金具以外では取り付ける事ができません。</li>
+                    <li>壁掛け用のネジ穴ピッチが金具の適応範囲外の為、お取付出来ません。</li>
+                    <li>テレビの重さが許容範囲外の為、取り付ける事ができません。</li>
+                    <li>テレビより金具がはみ出す為、取り付け非対応としています。※はみ出してもいい場合は別途お問い合わせください。</li>
+                    <li>テレビ背面に付属のスペーサーでも越えられない段差がある為、取り付ける事ができません。</li>
+                    <li>テレビ側金具が段差に干渉するため、取り付ける事ができません。</li>
+                    <li>テレビ背面の配線接続部分をふさいでしまう為、取り付ける事ができません。</li>
+                    <li>壁側金具（ベース）が段差に干渉するため、取り付ける事ができません。</li>
+                    <li>壁側金具（ベース）が配線に干渉するため、取り付ける事ができません。</li>
+                    <li>電源ケーブルが壁に干渉するため、取り付ける事ができません。</li>
+                    <li>コード類が壁に干渉するため、取り付ける事ができません。</li>
+                    <li>スタンド支柱が干渉するため、取り付ける事ができません。</li>
+                    <li>テレビ背面が傾斜している為、角度固定金具は非対応としています。</li>
+                    <li>壁掛け用のネジ穴があいていない為、壁掛け非対応です。</li>
+                    <li>その他の理由により非対応</li>
+                    <li>このテレビは非対応機種となっております。</li>
+                </ul>
+                <p style=" margin: 20px 75px 10px 75px;"><img
+                        src="https://www.ace-of-parts.com/data/ace-of-parts/image/information/batsu-dansa-kai.jpg"></p>
+                <div style="float:left; margin-right:20px;">
+                    <a href="https://www.ace-of-parts.com/product/2893"><img
+                            src="https://www.ace-of-parts.com/data/ace-of-parts/product/20151002_429d6c.gif"
+                            width="100px"></a>
+                </div>
+                <p>上記のように当店付属のスペーサーを使用しても設置できない場合は対応不可としておりますが、スペーサーを別途ご自身でご用意いただくと解決できるテレビもございます。<br>当店ではロングスペーサーを別途販売させていただいております。<br><br>
+
+                <p style=" margin: 20px 75px 10px 75px; clear:both;"><img
+                        src="https://www.ace-of-parts.com/data/ace-of-parts/product/longspacerset/longspacer-5a.gif">
+                </p>
+
+
+                <p>その他穴が開いていないなどで、どうしても設置ができないテレビも中にはございます。その場合は一度TVメーカーに直接お問い合わせいただくことをオススメいたします。最近ではメーカー純正金具でないと設置出来ないテレビも販売されておりますので、テレビを購入する前に事前に壁掛けが可能か確認してから購入をしていただくと失敗がありません。
+                </p>
+
+
+                <br /><br />
+                <h2>将来大きめのテレビに買い替えをご検討の場合</h2>
+                <p>当店では薄型金具もご用意しておりますが買い替えを検討していたり、新しいテレビでもゲームやプレイヤーを使用する方には
+                    <font color="#FF0000"><b>厚みのある金具をご選択いただくことをオススメいたします。</b></font>
+                    なぜかと言いますと、テレビの背面によって配線の仕方が違うからです。配線の厚みは3cm以上あるので、厚みのある金具を選択すると干渉せずに済むでしょう。<br /><br />アーム金具をご選択いただくと、テレビ背面のお掃除も楽になります。賃貸から一戸建てへお引越しの際にも再利用できる金具や商品は豊富にございます。是非商品ページをご覧ください。
+                </p>
+
+
+
+
+
+                <p style="text-align:right;">お問い合せは、<a href="https://ace-of-parts.ocnk.net/contact/"
+                        target="_blank">コチラ</a>から</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
