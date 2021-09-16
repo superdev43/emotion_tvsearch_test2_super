@@ -1,15 +1,19 @@
-document.getElementById('myFrame').style.display = "none";
-document.getElementById('myFrameS').style.display = "block";
+
+if(document.getElementById('myFrame') != null){
+
+    document.getElementById('myFrame').style.display = "none";
+}
+if(document.getElementById('myFrameS')!= null){
+
+    document.getElementById('myFrameS').style.display = "block";
+}
 //   2021.6.14 そのタブグループの配下グループのタブを押下したら、上部のタブグループは押下した状態にしてください。
 $(document).ready(function() {
     $('#guide-new > div.subsearch > div.subsearch-body > div:nth-child(1) > label > div.subsearch-content-main > dl').click(function() {
-        $('#rad1').prop('checked', true)
+        $('#tab1').prop('checked', true)
     })
     $('#guide-new > div.subsearch > div.subsearch-body > div:nth-child(2) > label > div.subsearch-content-main > dl').click(function() {
-        $('#rad2').prop('checked', true)
-    })
-    $('#guide-new > div.subsearch > div.subsearch-body > div:nth-child(3) > label > div.subsearch-content-main > dl').click(function() {
-        $('#rad3').prop('checked', true)
+        $('#tab2').prop('checked', true)
     })
 })
 
@@ -18,6 +22,7 @@ function ena(status) {
         document.getElementById("hang1").disabled = false;
         document.getElementById("hang2").disabled = false;
         document.getElementById("hang3").disabled = false;
+        ena_pol(2);
     } else {
         document.getElementById("hang1").disabled = true;
         document.getElementById("hang2").disabled = true;
@@ -25,6 +30,18 @@ function ena(status) {
         document.getElementById("hang1").checked = false;
         document.getElementById("hang2").checked = false;
         document.getElementById("hang3").checked = false;
+    }
+}
+function ena_pol(status){
+    if(status == 1){
+        document.getElementById("bar1").disabled = false;
+        document.getElementById("bar2").disabled = false;
+        ena(2);
+    }else{
+        document.getElementById("bar1").disabled = true;
+        document.getElementById("bar2").disabled = true;
+        document.getElementById("bar1").checked = false;
+        document.getElementById("bar2").checked = false;
     }
 }
 
@@ -47,9 +64,9 @@ function radioA() {
     document.getElementById("midprice").checked = false;
     document.getElementById("highprice").disabled = true;
     document.getElementById("highprice").checked = false;
-    document.getElementsByClassName('subsearch-content-main')[0].style.color = "black"
-    document.getElementsByClassName('subsearch-content-main')[1].style.color = "lightgrey"
-    document.getElementsByClassName('subsearch-content-main')[2].style.color = "lightgrey"
+    // document.getElementsByClassName('subsearch-content-main')[0].style.color = "black"
+    // document.getElementsByClassName('subsearch-content-main')[1].style.color = "lightgrey"
+    // document.getElementsByClassName('subsearch-content-main')[2].style.color = "lightgrey"
 
 }
 
@@ -221,10 +238,11 @@ function loadList() {
     drawList();
     check();
 }
+
 //「さらに絞り込む」ボタンをクリックすると実行
 function show_result() {
     //絞込み条件を設定してくださ
-    if (!document.getElementById('rad1').checked && !document.getElementById('rad2').checked && !document.getElementById('rad3').checked) { document.getElementById('condition-setting').style.display = 'block' } else { document.getElementById('condition-setting').style.display = 'none' }
+    if (!document.getElementById('tab1').checked && !document.getElementById('tab2').checked ) { document.getElementById('condition-setting1').style.display = 'block' } else { document.getElementById('condition-setting1').style.display = 'none' }
     var main = document.getElementsByClassName('subsearch-content-main')
     var children_type = main[0].getElementsByTagName("input")
     var children_count = 0;
@@ -259,12 +277,12 @@ function show_result() {
     }
 
     if (children_count == 0) {
-        document.getElementById('condition-setting').style.display = 'block'
+        document.getElementById('condition-setting1').style.display = 'block'
 
         // rowLength = beforeList.length
         // numberOfPage = getNumberOfPages();
     } else {
-        document.getElementById('condition-setting').style.display = 'none'
+        document.getElementById('condition-setting1').style.display = 'none'
         loadList()
         createNum(numberOfPage);
     }
@@ -379,9 +397,31 @@ function fitAlign(filtertype) {
         }
         list = [...hflist, ...hslist, ...htlist];
         console.log('fitType->', list);
+        ena_pol(2)
     }
     if (filtertype == 4) {
         list = fitAlignFiter(4);
+        ena(2);
+        ena_pol(2);
+    }
+    if(filtertype==5){
+        var firstList;
+        var secondList;
+        var barF = document.getElementById("bar1").checked;
+        var barS = document.getElementById("bar2").checked;
+        if (barF == true) {
+            firstList = base_list.filter(innerArray => innerArray[4][3] == 6);
+        } else {
+            firstList = "";
+        }
+
+        if (barS == true) {
+            secondList = base_list.filter(innerArray => innerArray[4][3] == 7);
+        } else {
+            secondList = "";
+        }
+        list = [...firstList, ...secondList];
+        console.log('fitType->', list);
         ena(2);
     }
 
@@ -411,6 +451,7 @@ function fitRent() {
 
     }
     ena(2)
+    ena_pol(2);
     list = [...r_list];
     rowLength = list.length;
     numberOfPage = getNumberOfPages();
@@ -423,7 +464,8 @@ function fitOp(param) {
     o_lsit = base_list.filter(innerArray => innerArray[4][3] == param);
     list = [...o_lsit]
 
-    ena(2)
+    ena(2);
+    ena_pol(2);
     rowLength = list.length;
     numberOfPage = getNumberOfPages();
     currentPage = 1
@@ -548,5 +590,121 @@ function createNum(count) {
         })
 
         sortNum.appendChild(page);
+    }
+}
+function show_result_type(){
+    
+    var main = document.getElementsByClassName('subsearch-content-main')
+    var children_type = main[0].getElementsByTagName("input")
+    var children_count = 0;
+    var hang_children_count = 0;
+    var bar_children_count = 0;
+
+    if (children_type[0].checked) {
+        var grandchildren = [children_type[1], children_type[2], children_type[3]]
+        for (var i = 0; i < grandchildren.length; i++) {
+            if (grandchildren[i].checked)
+                hang_children_count++;
+        }
+        children_count++;
+        if(hang_children_count == 0){
+            document.getElementById("hang1").disabled = false;
+            document.getElementById("hang2").disabled = false;
+            document.getElementById("hang3").disabled = false;
+            document.getElementById("hang1").checked = true;
+            document.getElementById("hang2").checked = true;
+            document.getElementById("hang3").checked = true;
+            fitAlign(1);
+            
+        }else{
+            fitAlign(1);
+        }
+    }
+    if (children_type[7].checked) {
+        var grandchildren = [children_type[8], children_type[9]]
+        for (var i = 0; i < grandchildren.length; i++) {
+            if (grandchildren[i].checked){
+
+                bar_children_count++;
+                
+            }
+            
+        }
+        children_count++;
+        if(bar_children_count == 0){
+            document.getElementById("bar1").disabled = false;
+            document.getElementById("bar2").disabled = false;
+            document.getElementById("bar1").checked = true;
+            document.getElementById("bar2").checked = true;
+            fitAlign(5);
+            
+        }else{
+            fitAlign(5);
+        }
+    }
+
+    
+
+
+    if(children_type[4].checked){
+        children_count++;
+    }
+    if(children_type[5].checked){
+        children_count++;
+    }
+    if(children_type[6].checked){
+        children_count++;
+    }
+    if(children_type[10].checked){
+        children_count++;
+    }
+
+  
+
+
+    if (children_count == 0) {
+        document.getElementById('condition-setting1').style.display = 'block'
+
+        // rowLength = beforeList.length
+        // numberOfPage = getNumberOfPages();
+    } else {
+        document.getElementById('condition-setting1').style.display = 'none'
+        loadList()
+        createNum(numberOfPage);
+    }
+
+
+    if (list == "") {
+        document.getElementById("next").disabled = true;
+        document.getElementById("previous").disabled = true;
+    }
+}
+function show_result_price(){   
+
+    var main = document.getElementsByClassName('subsearch-content-main')
+
+    var children_amount = main[1].getElementsByTagName('input');
+    var children_count = 0;
+
+    for (var i = 0; i < children_amount.length; i++) {
+        if (children_amount[i].checked)
+            children_count++
+    }
+
+    if (children_count == 0) {
+        document.getElementById('condition-setting2').style.display = 'block'
+
+        // rowLength = beforeList.length
+        // numberOfPage = getNumberOfPages();
+    } else {
+        document.getElementById('condition-setting2').style.display = 'none'
+        loadList()
+        createNum(numberOfPage);
+    }
+
+
+    if (list == "") {
+        document.getElementById("next").disabled = true;
+        document.getElementById("previous").disabled = true;
     }
 }

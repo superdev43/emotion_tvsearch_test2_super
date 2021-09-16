@@ -14,8 +14,8 @@ var flagSearchPage = 1;
 var tv_maker = localStorage['tv_maker'] ?? ''; // メーカー
 var tv_size =  localStorage['tv_size'] ??''; // インチ数
 var tv_productid = localStorage['tv_productid'] ?? ''; // 型番
-var tv_setuptype = localStorage['tv_setuptype'] ?? ''; // 取付け方法
-var tv_seriestype =  localStorage['tv_seriestype'] ??''; // 機能
+// var tv_setuptype = localStorage['tv_setuptype'] ?? ''; // 取付け方法
+// var tv_seriestype =  localStorage['tv_seriestype'] ??''; // 機能
 
 var url_id = "";
 window.addEventListener('load', function() {
@@ -33,8 +33,8 @@ window.addEventListener('load', function() {
     if (href.match(/m=([^&]*)/)) { tv_maker = RegExp.$1; }
     if (href.match(/s=([^&]*)/)) { tv_size = RegExp.$1; }
     if (href.match(/p=([^&]*)/)) { tv_productid = RegExp.$1; }
-    if (href.match(/u=([^&]*)/)) { tv_setuptype = RegExp.$1; }
-    if (href.match(/r=([^&]*)/)) { tv_seriestype = RegExp.$1; }
+    // if (href.match(/u=([^&]*)/)) { tv_setuptype = RegExp.$1; }
+    // if (href.match(/r=([^&]*)/)) { tv_seriestype = RegExp.$1; }
 
     // for (var i = 0; i < tv_model.length; ++i) {
     //     var splits = tv_model[i].split(",");
@@ -76,20 +76,24 @@ function setSelect2b(tv_size) {
 
 function setSelect3b(tv_productid) {
     document.getElementById('tv_productid').value = tv_productid;
-    setSelect4();
-    setSelect4b(tv_setuptype);
-}
-
-function setSelect4b(tv_setuptype) {
-    document.getElementById('tv_setuptype').value = tv_setuptype;
-    setSelect5();
-    setSelect5b(tv_seriestype);
-}
-
-function setSelect5b(tv_seriestype) {
-    document.getElementById('tv_seriestype').value = tv_seriestype;
-    search();
+    setButton();
     if (location.href.match(/\/sp\//)) {
         location.hash = 'itemlist';
     }
+    // setSelect4();
+    // setSelect4b(tv_setuptype);
 }
+
+// function setSelect4b(tv_setuptype) {
+//     document.getElementById('tv_setuptype').value = tv_setuptype;
+//     setSelect5();
+//     setSelect5b(tv_seriestype);
+// }
+
+// function setSelect5b(tv_seriestype) {
+//     document.getElementById('tv_seriestype').value = tv_seriestype;
+//     // search();
+//     // if (location.href.match(/\/sp\//)) {
+//     //     location.hash = 'itemlist';
+//     // }
+// }
