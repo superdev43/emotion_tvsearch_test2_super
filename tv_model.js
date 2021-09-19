@@ -58,7 +58,7 @@ function ena(status) {
 function ena_pol(status){
     if(status == 1){
         if(document.getElementById("bar1").checked == false &&
-        document.getElementById("bar2").checked == false){
+            document.getElementById("bar2").checked == false){
             document.getElementById("bar1").disabled = false;
             document.getElementById("bar2").disabled = false;
             document.getElementById("bar1").checked = true;
@@ -429,7 +429,7 @@ function fitAlign(filtertype) {
         ena_pol(2)
     }
     if (filtertype == 4) {
-        list = fitAlignFiter(4);
+        list = base_list.filter(innerArray => innerArray[4][1] == filtertype);
         ena(2);
         ena_pol(2);
     }
@@ -466,7 +466,7 @@ function fitAlign(filtertype) {
 }
 
 function fitAlignFiter(arg) {
-    var fitFilterlist = base_list.filter(innerArray => innerArray[4][1] == arg);
+    var fitFilterlist = base_list.filter(innerArray => innerArray[4][3] == arg);
     return fitFilterlist;
 }
 //2021.5.28--------------2桁目
@@ -490,7 +490,7 @@ function fitRent() {
 function fitOp(param) {
 
     var o_lsit;
-    o_lsit = base_list.filter(innerArray => innerArray[4][3] == param);
+    o_lsit = base_list.filter(innerArray => innerArray[4][1] == param);
     list = [...o_lsit]
 
     ena(2);
