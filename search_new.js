@@ -412,7 +412,10 @@ function search() {
             var copy = splits_of_price[3];
             var urlPage = splits_of_price[4];
             var urlImg = splits_of_price[5];
-            var fit = splits_of_price[6];
+            var kanagu_class = splits_of_price[6];
+            var kanagu_type = splits_of_price[7];
+            var kanagu_type_detail = splits_of_price[8];
+            var kanagu_rental = splits_of_price[9];
             var image = '<a href="' + urlPage + '" target="_blank"><img src="' + urlImg + '" /></a>';
             title = '<a href="' + urlPage + '" target="_blank">' + title + '</a>';
             price = '<a href="' + urlPage + '" target="_blank">' + price + '</a>';
@@ -427,7 +430,10 @@ function search() {
             itemlist += '<td class="title">' + title + '<div class="mno">' + modelno + '</div>' + copy + '</td>';
             itemlist += '<td class="price">' + price + '</td>';
             itemlist += '<td style="display:none">' + pricea + '</td>';
-            itemlist += '<td style="display:none">' + fit + '</td>';
+            itemlist += '<td style="display:none">' + kanagu_class + '</td>';
+            itemlist += '<td style="display:none">' + kanagu_type + '</td>';
+            itemlist += '<td style="display:none">' + kanagu_type_detail + '</td>';
+            itemlist += '<td style="display:none">' + kanagu_rental + '</td>';
             itemlist += '</tr>';
 
 
@@ -439,53 +445,6 @@ function search() {
             itemlist += '</tr>';
         }
     }    
-    // 金具IDが半角スペース区切りで入っているので配列に入れ直し、値毎に詳細を表示する
-    // var itemlist = '';
-    
-    // var kanaguids = kanaguid.split(/ /g);
-    // console.log('kanaguid->', kanaguid);
-
-    // for (var i = 0; i < kanaguids.length; ++i) {
-    //     if (!kanaguids[i]) { continue; }
-    //     kanaguid = kanaguids[i];
-    //     if (items[kanaguid]) {
-    //         items[kanaguid] = items[kanaguid].replace(/,/g, "\t");
-    //         items[kanaguid] = items[kanaguid].replace(/<c>/g, ",");
-    //         var splits = items[kanaguid].split("\t");
-    //         var modelno = splits[0];
-    //         var pricea = splits[1];
-    //         var price = addFigure(splits[1]);
-    //         price = '<div class="stitle">通常価格<br>（税込）</div><div class="price">' + price + '円</div>'
-    //         var title = splits[2];
-    //         var copy = splits[3];
-    //         var urlPage = splits[4];
-    //         var urlImg = splits[5];
-    //         var fit = splits[6];
-    //         var image = '<a href="' + urlPage + '" target="_blank"><img src="' + urlImg + '" /></a>';
-    //         title = '<a href="' + urlPage + '" target="_blank">' + title + '</a>';
-    //         price = '<a href="' + urlPage + '" target="_blank">' + price + '</a>';
-    //         // お問い合わせくださいの場合の調整
-    //         if (modelno == 'contact') {
-    //             modelno = '';
-    //             copy = '';
-    //             price = '';
-    //         }
-    //         itemlist += '<tr>';
-    //         itemlist += '<td class="img" style="width:1%;">' + image + '</td>';
-    //         itemlist += '<td class="title">' + title + '<div class="mno">' + modelno + '</div>' + copy + '</td>';
-    //         itemlist += '<td class="price">' + price + '</td>';
-    //         itemlist += '<td style="display:none">' + pricea + '</td>';
-    //         itemlist += '<td style="display:none">' + fit + '</td>';
-    //         itemlist += '</tr>';
-
-    //     } else {
-    //         itemlist += '<tr>';
-    //         itemlist += '<td class="img"></td>';
-    //         itemlist += '<td class="title">' + kanaguid + '</td>';
-    //         itemlist += '<td class="price"></td>';
-    //         itemlist += '</tr>';
-    //     }
-    // }
 
 
     //2021.6.14 遷移先ページの　上部の検索コンテンツは削除。

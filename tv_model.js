@@ -408,19 +408,19 @@ function fitAlign(filtertype) {
         var hangT = document.getElementById("hang3").checked;
 
         if (hangF == true) {
-            hflist = fitAlignFiter(1);
+            hflist = fitAlignFiter('FIX');
         } else {
             hflist = "";
         }
 
         if (hangS == true) {
-            hslist = fitAlignFiter(2);
+            hslist = fitAlignFiter('UPD');
         } else {
             hslist = "";
         }
 
         if (hangT == true) {
-            htlist = fitAlignFiter(3);
+            htlist = fitAlignFiter('ARM');
         } else {
             htlist = "";
         }
@@ -428,8 +428,8 @@ function fitAlign(filtertype) {
         console.log('fitType->', list);
         ena_pol(2)
     }
-    if (filtertype == 4) {
-        list = base_list.filter(innerArray => innerArray[4][1] == filtertype);
+    if (filtertype == 'CEL') {
+        list = base_list.filter(innerArray => innerArray[5] == filtertype);
         ena(2);
         ena_pol(2);
     }
@@ -439,13 +439,13 @@ function fitAlign(filtertype) {
         var barF = document.getElementById("bar1").checked;
         var barS = document.getElementById("bar2").checked;
         if (barF == true) {
-            firstList = base_list.filter(innerArray => innerArray[4][3] == 6);
+            firstList = base_list.filter(innerArray => innerArray[6] == 'CL1');
         } else {
             firstList = "";
         }
 
         if (barS == true) {
-            secondList = base_list.filter(innerArray => innerArray[4][3] == 7);
+            secondList = base_list.filter(innerArray => innerArray[6] == 'CL2');
         } else {
             secondList = "";
         }
@@ -466,7 +466,7 @@ function fitAlign(filtertype) {
 }
 
 function fitAlignFiter(arg) {
-    var fitFilterlist = base_list.filter(innerArray => innerArray[4][3] == arg);
+    var fitFilterlist = base_list.filter(innerArray => innerArray[6] == arg);
     return fitFilterlist;
 }
 //2021.5.28--------------2桁目
@@ -474,9 +474,9 @@ function fitRent() {
     var r_list;
     var rent = document.getElementById('rental');
     if (rent.checked) {
-        r_list = base_list.filter(innerArray => innerArray[4][2] == 1);
+        r_list = base_list.filter(innerArray => innerArray[7] == 'RNT');
     } else {
-        r_list = base_list.filter(innerArray => innerArray[4][2] == 0);
+        r_list = base_list.filter(innerArray => innerArray[7] == 'NRT');
 
     }
     ena(2)
@@ -490,7 +490,7 @@ function fitRent() {
 function fitOp(param) {
 
     var o_lsit;
-    o_lsit = base_list.filter(innerArray => innerArray[4][1] == param);
+    o_lsit = base_list.filter(innerArray => innerArray[5] == param);
     list = [...o_lsit]
 
     ena(2);
