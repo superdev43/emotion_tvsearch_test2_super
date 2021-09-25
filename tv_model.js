@@ -17,20 +17,23 @@ $(document).ready(function() {
     })
 })
 function tab2_clear(){
+    document.getElementById('condition-setting1').style.display = 'none'
+    document.getElementById('condition-setting2').style.display = 'none'
+    
+}
+function tab1_clear(){
+    document.getElementById('condition-setting1').style.display = 'none'
+    document.getElementById('condition-setting2').style.display = 'none'
+    
+}
+function ena(status) {
+    document.getElementById('condition-setting1').style.display = 'none'
+    document.getElementById('condition-setting2').style.display = 'none'
     var main = document.getElementsByClassName('subsearch-content-main')
     var price_children = main[1].getElementsByTagName("input");
     for(var i = 0; i<price_children.length; i++){
         price_children[i].checked = false;
     }
-}
-function tab1_clear(){
-    var main = document.getElementsByClassName('subsearch-content-main')
-    var type_children = main[0].getElementsByTagName("input")
-    for(var i =0; i<type_children.length;i++){
-        type_children[i].checked = false;
-    }
-}
-function ena(status) {
     if (status == 1) {
         if(document.getElementById("hang1").checked == false &&
         document.getElementById("hang2").checked == false &&
@@ -56,6 +59,13 @@ function ena(status) {
     }
 }
 function ena_pol(status){
+    document.getElementById('condition-setting1').style.display = 'none'
+    document.getElementById('condition-setting2').style.display = 'none'
+    var main = document.getElementsByClassName('subsearch-content-main')
+    var price_children = main[1].getElementsByTagName("input");
+    for(var i = 0; i<price_children.length; i++){
+        price_children[i].checked = false;
+    }
     if(status == 1){
         if(document.getElementById("bar1").checked == false &&
             document.getElementById("bar2").checked == false){
@@ -399,6 +409,13 @@ function sortOrder() {
 }
 //2021.5.28--------------３桁目
 function fitAlign(filtertype) {
+    document.getElementById('condition-setting1').style.display = 'none'
+    document.getElementById('condition-setting2').style.display = 'none'
+    var main = document.getElementsByClassName('subsearch-content-main')
+    var price_children = main[1].getElementsByTagName("input");
+    for(var i = 0; i<price_children.length; i++){
+        price_children[i].checked = false;
+    }
     if (filtertype == 1) {
         var hflist;
         var hslist;
@@ -439,13 +456,13 @@ function fitAlign(filtertype) {
         var barF = document.getElementById("bar1").checked;
         var barS = document.getElementById("bar2").checked;
         if (barF == true) {
-            firstList = base_list.filter(innerArray => innerArray[6] == 'CL1');
+            firstList = base_list.filter(innerArray => innerArray[6] == 'PL1');
         } else {
             firstList = "";
         }
 
         if (barS == true) {
-            secondList = base_list.filter(innerArray => innerArray[6] == 'CL2');
+            secondList = base_list.filter(innerArray => innerArray[6] == 'PL2');
         } else {
             secondList = "";
         }
@@ -471,6 +488,13 @@ function fitAlignFiter(arg) {
 }
 //2021.5.28--------------2桁目
 function fitRent() {
+    document.getElementById('condition-setting1').style.display = 'none'
+    document.getElementById('condition-setting2').style.display = 'none'
+    var main = document.getElementsByClassName('subsearch-content-main')
+    var price_children = main[1].getElementsByTagName("input");
+    for(var i = 0; i<price_children.length; i++){
+        price_children[i].checked = false;
+    }
     var r_list;
     var rent = document.getElementById('rental');
     if (rent.checked) {
@@ -488,6 +512,13 @@ function fitRent() {
 }
 //2021.5.28--------------1桁目
 function fitOp(param) {
+    document.getElementById('condition-setting1').style.display = 'none'
+    document.getElementById('condition-setting2').style.display = 'none'
+    var main = document.getElementsByClassName('subsearch-content-main')
+    var price_children = main[1].getElementsByTagName("input");
+    for(var i = 0; i<price_children.length; i++){
+        price_children[i].checked = false;
+    }
 
     var o_lsit;
     o_lsit = base_list.filter(innerArray => innerArray[5] == param);
@@ -503,6 +534,7 @@ function fitOp(param) {
 
 //2021.5.28--------------1桁目
 function fitClass() {
+    
     var alist;
     var blist;
     var clist;
@@ -548,6 +580,17 @@ function fitClassFiter(arg) {
 }
 
 function price() {
+    document.getElementById('condition-setting1').style.display = 'none'
+    document.getElementById('condition-setting2').style.display = 'none'
+    var main = document.getElementsByClassName('subsearch-content-main')
+    var type_children = main[0].getElementsByTagName("input")
+    for(var i =0; i<type_children.length;i++){
+        type_children[i].checked = false;
+        if(type_children[i].type == 'checkbox'){
+            type_children[i].disabled = true;
+        }
+        
+    }
 
     var alist;
     var blist;
